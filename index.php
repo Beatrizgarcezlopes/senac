@@ -6,20 +6,18 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Bom Dia </title>
+        <title></title>
     </head>
     <body>
-        <form method =" post">
-            <h1>Programa Bom Dia </h1>   
-            <label for ="fname">Nome:</label><br>
-            <input type ="text" id =" nome" name ="nome" value =""><br>
-            <input type ="submit" value =" Enviar">
-        </form>
         <?php
+        //Comando de Repetição
+        //Tabuada
+        $num = 9;
+        echo "<h1>Tabuada do $num</h1>";
+        for($i = 0; $i<=10;$i++){
+        $r = $i*$num;
+        echo "$i X $num = $r";
         echo "<br>";
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $nome = $_POST["nome"];
-            echo "Bom Dia $nome!";
         }
         
         ?>
