@@ -6,82 +6,55 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>PET SHOP </title>
+        <title>Escola de Música</title>
     </head>
-    <style>
-        form {
-        /* Apenas para centralizar o form na página*/
-        margin: 0 auto;
-        width: 400px;
-        /* Para ver as bordas do formulário*/
-        padding: 1em;
-        border: 1px solid#CCC;
-    }
-     form div+div {
-        margin-top: 1em;
-     }
-     label {
-        /*Para ter certeza que todas as labels tem o mesmo tamanho e estão propriamente alinhadas*/
-        display: inline-block;
-        width: 90px;
-        text-align: right;
-     }
-     input, textarea {
-        /*Para certificar que todos os campos tem as mesmas configurações de fonte. Por padrão, textareas devem ter uma fonte monospace */
-        font:1em sans-serif;
-        /*Para dar o mesmo tamanho a todos os campos de texto*/
-        width: 300px;;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        /*Para harmonizar o look & feel das bordas nos campos de texto*/
-        border: 1px solid #999
-     }
-     input:focus, textarea:focus {
-        border-color: blue;
-     }
-     textarea{
-      /*Para alinhar corretamente os campos de texto de várias linhas com sua label*/
-      vertical-align: top;
-      /*Para dar espaço suficiente para digitar algum texto*/
-      height: 5em;
-      /*Para permitir aos usuários redimensionarem qualquer textarea verticalmente.
-      Ele não funciona em todos os browsers*/
-      resize: vertical;
-     }
-	 h1 {
-		 font-family : arial;
-		 font-size: 30px;
-		 color: brown;
-	 }
-
-    </style>
     <body>
-        <form method ="post">
-         <h1>Venda de Produtos</h1>  
-         <label for ="fname">Nome do Pet:</label><br>
-         <input type ="texto" id = "nome" name = "nome" value =""><br>
-         <label for ="fname">Dono:</label><br>
-         <input type ="texto" id = "dono" name = "dono" value =""><br>
-         <label for ="fname">Vacinação</label><br>
-         <input type ="texto" id = "vacina" name = "vacina" value ="20.00"><br>
-         <label for ="fname">Ração:</label><br>
-         <input type ="texto" id = "racao" name = "racao" value ="15.00"><br>
-         <input type = "submit" value ="Calcular">   
-        </form>    
-        <?php
-        // Váriaveis
-        if ($_SERVER["REQUEST_METHOD"] == "POST"){
-          $pet = $_POST ["nome"] ;
-          $dono = $_POST ["dono"] ;  
-          $vacinacao = $_POST ["vacina"] ;  
-          $racao = $_POST ["racao"] ; 
-          echo "<h1>PDV</h1>";
-          //Cálculo
-          $vlrtotal = $vacinacao+$racao;
-          //Escreva na Tela
-          echo "o valor da vacinação que é $vacinacao junto com a da ração que é $racao custa R$ $vlrtotal <br>";
-          echo "Valor Total é igual a R$ $vlrtotal"; 
-        }
+<center><h1> Cadastro do Aluno </h1></center>
+<form = method="post">
+<div>
+<label for="fcod">Código: </label>
+<input type="text" id="codigo" name="codigo" />
+</div>
+<br> 
+<div>
+<label for="fname">Nome: </label>
+<input type="text" id="nome" name="nome" />
+</div>
+<br> 
+<div>        
+<label for="femail">E-mail: </label>
+<input type="email" id="email" name="email" />
+</div>
+<br>  
+<div>
+<label for="ffone">Fone: </label>
+<input type="fone" id="fone" name="fone"/>
+</div>
+<br>
+ 
+
+<div class="button">
+<button type="submit">Cadastrar</button>
+</div>
+<div class="button">
+<button type="reset">Limpar</button>
+</div>
+</form>  
+ 
+   <?php
+   if ($_SERVER["REQUEST_METHOD"] == "POST"){
+
+     $codigo = $_POST["codigo"];
+     $nome = $_POST["nome"];
+     $email = $_POST["email"];
+     $fone = $_POST["fone"];
+     echo "<h1> Dados do Alunos </h1>";
+     echo "Nome:  $nome <br>";
+     echo "E-mail: $email <br>";
+     echo "Fone: $fone <br>";
+
+     }
+ 
         ?>
     </body>
 </html>
