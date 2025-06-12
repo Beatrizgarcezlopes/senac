@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Nova Morada Imóveis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">🏡 Nova Morada</div>
+    <div class="carrinho-icon" onclick="toggleCarrinho()">
+      🏠 <span id="contador">0</span>
+    </div>
+  </header>
+
+  <main>
+    <h2>Imóveis Disponíveis</h2>
+    <div class="imoveis">
+      <div class="imovel">
+        <h3>Casa em Florianópolis</h3>
+        <p>R$ 750.000</p>
+        <button onclick="adicionarAoCarrinho('Casa em Florianópolis', 750000)">Tenho Interesse</button>
+      </div>
+      <div class="imovel">
+        <h3>Apartamento no Rio de Janeiro</h3>
+        <p>R$ 500.000</p>
+        <button onclick="adicionarAoCarrinho('Apartamento no Rio de Janeiro', 500000)">Tenho Interesse</button>
+      </div>
+      <div class="imovel">
+        <h3>Chácara em Minas Gerais</h3>
+        <p>R$ 1.200.000</p>
+        <button onclick="adicionarAoCarrinho('Chácara em Minas Gerais', 1200000)">Tenho Interesse</button>
+      </div>
+    </div>
+  </main>
+
+  <aside id="carrinho">
+    <h3>Imóveis de Interesse</h3>
+    <div id="itens-carrinho">Nenhum imóvel selecionado.</div>
+    <div id="total">Valor total estimado: R$ 0,00</div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
